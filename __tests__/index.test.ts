@@ -27,6 +27,11 @@ describe("`hexToRgb`", () => {
     expect(hexToRgb("#000")).toEqual([0, 0, 0]);
   });
 
+  it('should covert "ff1231" to (255,18,49)'),
+    () => {
+      expect(hexToRgb("#ff1231")).toEqual([255, 18, 49]);
+    };
+
   it("should throw an error when given an invalid hexadecimal color value", () => {
     expect(() => hexToRgb("#XYZ")).toThrow(Error);
   });
